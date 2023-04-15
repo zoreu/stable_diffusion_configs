@@ -344,10 +344,10 @@ class LDM:
             if compare_num>max_compare_num or see_images1>max_see_images or see_images2>max_see_images:
                 break
             for imf2 in os.listdir(imagedir2):
-                print cc1,cc2,compare_num,see_images1,see_images2,imf1,imf2
+                print(cc1,cc2,compare_num,see_images1,see_images2,imf1,imf2)
                 img2=cv2.imread(os.path.join(imagedir2,imf2))
                 rd=self.face_rec(img1,img2,0.0)
-                print rd
+                print(rd)
                 if compare_num>max_compare_num or see_images1>max_see_images or see_images2>max_see_images:
                     break
                 if len(rd['face1l'])<1 or cc1>3 or cc2>3:
@@ -366,7 +366,7 @@ class LDM:
                 #cc2+=1
                 #compare_num+=1
                 for score in rd['scorel']:
-                       print "score:",score
+                       print("score:",score)
                        score_ave+=score
                        compare_num+=1
                        cc2+=1
@@ -424,7 +424,7 @@ class LDM:
                 #cc2+=1
                 #compare_num+=1
                 for score in rd['scorel']:
-                       print "score:",score
+                       print("score:",score)
                        score_ave+=score
                        compare_num+=1
                        cc2+=1
