@@ -17,7 +17,7 @@ class LDM:
         self.face_rec_model_path='face_rec.dat'
         url="http://dlib.net/files/dlib_face_recognition_resnet_model_v1.dat.bz2"
         self.face_rec_model_path=self.get_model(url,self.face_rec_model_path)
-        print self.face_rec_model_path 
+        print(self.face_rec_model_path)
         self.facerec = dlib.face_recognition_model_v1(self.face_rec_model_path)
         self.CF = msd.init()
     def imread(self,imgpath):
@@ -499,34 +499,3 @@ class LDM:
         return xy_arr,xy_arr_key,error_equl_pos,auc
         #title="ROC curve of %s (AUC = %.4f)" % ('race_classier' , auc)
         #draw_curve(x,y,800,600,title,"False Positive Rate(FA)","True Positive Rate(RECALL)")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
- 
